@@ -4,18 +4,16 @@ using umbraco.BusinessLogic;
 
 namespace Rob.TestProject
 {
+    /// <summary>
+    /// Example implementation which protects a property unless the user's name is "bob"
+    /// </summary>
     public class BobOnlyAccessCheck : IProtectedPropertyAccessCheck
     {
-        #region Implementation of IProtectedPropertyAccessCheck
-
         public bool UserHasAccess(int nodeId, User user)
         {
+            //Can do anything here.
             return user.Name == "bob";
         }
-
-        #endregion
-
-        #region Implementation of IProtectedPropertyAccessCheck
 
         public string Name
         {
@@ -24,9 +22,8 @@ namespace Rob.TestProject
 
         public string ProtectionMessage
         {
+            //This is the message displayed in the Umbraco GUI
             get { return "Only Bob can access this field"; }
         }
-
-        #endregion
     }
 }
