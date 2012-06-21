@@ -1,0 +1,12 @@
+# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
+bin
+obj
+
+# Visual Studio's useless files
+*.user
+*.suo
+
+# mstest test results
+TestResults
+/src/BuildingBlocks.Tridion2011Extensions.CodeMirror/BuildingBlocks.Tridion2011Extensions.CodeMirror/BuildingBlocks.Tridion2011Extensions.CodeMirror.csproj.user
+/src/BuildingBlocks.Tridion2011Extensions.CodeMirror/BuildingBlocks.Tridion2011Extensions.CodeMirror.suo
