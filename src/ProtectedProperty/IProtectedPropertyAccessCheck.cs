@@ -1,6 +1,6 @@
 ﻿using umbraco.BusinessLogic;
 
-namespace MagneticNorth.Umbraco.DataTypes.ProtectedProperty
+namespace Rob.Umbraco.DataTypes.ProtectedProperty
 {
     public interface IProtectedPropertyAccessCheck
     {

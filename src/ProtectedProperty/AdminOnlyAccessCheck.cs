@@ -1,6 +1,4 @@
-using System;
-
-namespace MagneticNorth.Umbraco.DataTypes.ProtectedProperty
+namespace Rob.Umbraco.DataTypes.ProtectedProperty
 {
     public class AdminOnlyAccessCheck : IProtectedPropertyAccessCheck
     {

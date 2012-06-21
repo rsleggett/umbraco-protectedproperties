@@ -3,7 +3,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using umbraco.interfaces;
 
-namespace MagneticNorth.Umbraco.DataTypes.ProtectedProperty
+namespace Rob.Umbraco.DataTypes.ProtectedProperty
 {
     public class DisabledPropertyDataEditor : PlaceHolder, IDataEditor
     {

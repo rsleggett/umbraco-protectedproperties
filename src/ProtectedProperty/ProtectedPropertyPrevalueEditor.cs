@@ -8,7 +8,7 @@ using umbraco.interfaces;
 using umbraco.DataLayer;
 using umbraco.BusinessLogic;
 
-namespace MagneticNorth.Umbraco.DataTypes.ProtectedProperty
+namespace Rob.Umbraco.DataTypes.ProtectedProperty
 {
     public class ProtectedPropertyPrevalueEditor : PlaceHolder, IDataPrevalue
     {

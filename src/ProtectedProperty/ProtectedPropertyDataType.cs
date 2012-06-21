@@ -6,7 +6,7 @@ using umbraco.BusinessLogic;
 using umbraco.cms.businesslogic.datatype;
 using umbraco.interfaces;
 
-namespace MagneticNorth.Umbraco.DataTypes.ProtectedProperty
+namespace Rob.Umbraco.DataTypes.ProtectedProperty
 {
     public class ProtectedPropertyDataType : BaseDataType,IDataType
     {

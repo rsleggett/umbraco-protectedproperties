@@ -1,5 +1,5 @@
 ﻿using System;
-using MagneticNorth.Umbraco.DataTypes.ProtectedProperty;
+using Rob.Umbraco.DataTypes.ProtectedProperty;
 using umbraco.BusinessLogic;
 
 namespace Rob.TestProject
