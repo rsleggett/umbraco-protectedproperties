@@ -8,7 +8,7 @@ available depending on certain conditions.
 
 Concepts:
 
-The idea is to wrap existing datatypes with the protected one. So for example say you had an existing datatype called "Banner Locations" which you wanted only available to Administrators you would create a second DataType called "Protected Banner Locations" and set the datatype to "Banner Locations" and then select the class from the other drop down.
+The idea is to wrap existing datatypes with the protected one. So for example say you had an existing datatype called "Banner Locations" which you wanted only available to Administrators you would create a second DataType called "Protected Banner Locations" and set the datatype to "Banner Locations" and then select the class to use as protection e.g. AdminOnlyAccessCheck from the other drop down. See wiki for more detail: https://github.com/rsleggett/umbraco-protectedproperties/wiki/How-to-create-a-protected-datatype
 
 The package ships with an AdminOnly implementation but an interface allows easy extension with arbitrary conditions.
 
