@@ -39,3 +39,4 @@ For example:
     
 To install this, just place the compiled DLL Rob.Umbraco.DataTypes.ProtectedProperty in the bin directory. Then you can go to the developer tab and create a new datatype.
 
+Special thanks to Sanj and Steve at magneticNorth (http://mnatwork.com) for finding the code.
