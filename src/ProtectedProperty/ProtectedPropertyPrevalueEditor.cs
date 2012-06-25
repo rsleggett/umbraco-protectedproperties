@@ -43,7 +43,7 @@ namespace Rob.Umbraco.DataTypes.ProtectedProperty
 
         private List<DataTypeDefinition> GetExistingDatatypes()
         {
-            return DataTypeDefinition.GetAll().ToList();
+            return DataTypeDefinition.GetAll().Where(x => x.DataType.Id != new ProtectedPropertyDataType().Id).ToList();
         }
 
         private List<Type> GetProtectionTypes()

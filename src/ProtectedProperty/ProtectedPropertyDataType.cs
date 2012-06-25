@@ -34,7 +34,7 @@ namespace Rob.Umbraco.DataTypes.ProtectedProperty
                     if (!string.IsNullOrEmpty(((ProtectedPropertyPrevalueEditor) PrevalueEditor).Configuration))
                     {
                         string[] config = ((ProtectedPropertyPrevalueEditor) PrevalueEditor).Configuration.Split('|');
-                        var def = GetDataTypeDefinitionFromConfig(config[0]);
+                        var def = GetDataTypeDefinition(config[0]);
 
                         if (def != null)
                         {
@@ -60,7 +60,7 @@ namespace Rob.Umbraco.DataTypes.ProtectedProperty
 
         public override string DataTypeName
         {
-            get { return "Protected Property v0.2"; }
+            get { return "Protected Property"; }
         }
 
         public override IDataEditor DataEditor
@@ -72,7 +72,7 @@ namespace Rob.Umbraco.DataTypes.ProtectedProperty
                     if (!string.IsNullOrEmpty(((ProtectedPropertyPrevalueEditor)PrevalueEditor).Configuration))
                     {
                         string[] config = ((ProtectedPropertyPrevalueEditor)PrevalueEditor).Configuration.Split('|');
-                        IProtectedPropertyAccessCheck check = LoadTypeFromConfig(config[1]);
+                        IProtectedPropertyAccessCheck check = LoadType(config[1]);
                         bool disabled = !check.UserHasAccess(GetPageId(), User.GetCurrent());
 
                         if (disabled)
@@ -91,7 +91,7 @@ namespace Rob.Umbraco.DataTypes.ProtectedProperty
             get { return new Guid("df6da481-38e7-4827-a19a-dc1f1dbf3ed2"); }
         }
 
-        private DataTypeDefinition GetDataTypeDefinitionFromConfig(string dataTypeDefinitionId)
+        private DataTypeDefinition GetDataTypeDefinition(string dataTypeDefinitionId)
         {
             DataTypeDefinition[] defs = DataTypeDefinition.GetAll();
             Guid dataTypeGuid = new Guid(dataTypeDefinitionId);
@@ -105,7 +105,7 @@ namespace Rob.Umbraco.DataTypes.ProtectedProperty
             return int.Parse(HttpContext.Current.Request["id"]);
         }
 
-        private IProtectedPropertyAccessCheck LoadTypeFromConfig(string protectionTypeName)
+        private IProtectedPropertyAccessCheck LoadType(string protectionTypeName)
         {
             if (string.IsNullOrEmpty(protectionTypeName))
                 return new AdminOnlyAccessCheck();
